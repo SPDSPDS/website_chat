@@ -4,13 +4,44 @@
     <title>Chat With Webpages</title>
     <meta charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 5px 2px 5px 2px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .btn {
+            margin: 5px 0px 0px 5px; 
+        }
+
+        #response {
+            border: 1px solid #ced4da; /* Thin boundary */
+            border-radius: 5px;
+            padding: 10px;
+            max-height: 200px; /* Maximum height */
+            overflow-y: auto; /* Enable vertical scroll if content exceeds max height */
+            background-color: #f0f0f0; /* Soothing background color */
+            margin-top: 20px;
+            text-align: left; /* Align text to the left */
+        }
+    </style>
 </head>
 <body>
     <div class="container mt-3" style="width: 450px;">
         <h2 class="text-center">Chat With Webpages</h2>
-        <input type="text" id="userInput" class="form-control mb-3" placeholder="Enter text...">
-        <button id="sendButton" class="btn btn-primary">Send</button>
-        <div id="response" class="mt-3"></div>  
+        <input type="text" id="userInput" class="form-control mb-3" placeholder="Type your query...">
+        <div class="btn-container">
+            <!-- Add input element for file selection -->
+            <input type="file" id="pdfFileInput" style="display: none;" accept=".pdf">
+            <button id="sendButton" class="btn btn-primary">Send</button>
+            <button id="summarizeButton" class="btn btn-primary">Summarize</button>
+            <button id="pdfButton" class="btn btn-primary" style="display: none;" disabled>PDF</button>
+        </div>
+        <div id="response" class="mt-3">Hello There! 😀</div>  
     </div>
     <script src="script.js"></script>
 </body>

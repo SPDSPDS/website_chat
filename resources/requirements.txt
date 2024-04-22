@@ -1,9 +1,10 @@
 langchain
 langchainhub
-streamlit
+# streamlit
 bs4
 chromadb
 tiktoken
 unstructured
 chainlit
 libmagic
+python-magic-bin
