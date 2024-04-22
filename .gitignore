@@ -1,2 +1,4 @@
 # ignore ALL .env files
 *.env
+
+dbChroma/
